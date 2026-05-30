@@ -1,4 +1,18 @@
+"use client"
+
+import { useState } from "react"
+
 export default function Home() {
+  const [valor, setValor] = useState(10000)
+
+  function aumentar() {
+    setValor(valor + 500)
+  }
+
+  function diminuir() {
+    setValor(valor - 500)
+  }
+
   return (
     <main style={{
       background: "#0a0a0a",
@@ -8,40 +22,45 @@ export default function Home() {
       fontFamily: "Arial"
     }}>
       
-      <h1 style={{ fontSize: "36px", fontWeight: "bold" }}>
-        PELLEGRINELI INVEST
-      </h1>
+      <h1>PELLEGRINELI INVEST</h1>
 
-      <p style={{ opacity: 0.7, marginBottom: "40px" }}>
-        Inteligência financeira e análise de mercado em tempo real
-      </p>
+      <p>Carteira Simulada Interativa</p>
 
       <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-        gap: "20px"
+        background: "#111",
+        padding: "20px",
+        borderRadius: "12px",
+        marginTop: "20px"
       }}>
+        <h2>Saldo da Carteira</h2>
 
-        <div style={{ background: "#111", padding: "20px", borderRadius: "12px" }}>
-          <h3>Carteira Simulada</h3>
-          <p style={{ fontSize: "20px" }}>R$ 12.450,00</p>
+        <h1 style={{ fontSize: "40px" }}>
+          R$ {valor.toLocaleString()}
+        </h1>
+
+        <div style={{ display: "flex", gap: "10px", marginTop: "20px" }}>
+          <button onClick={aumentar} style={{
+            padding: "10px",
+            background: "green",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer"
+          }}>
+            + Ganhar
+          </button>
+
+          <button onClick={diminuir} style={{
+            padding: "10px",
+            background: "red",
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer"
+          }}>
+            - Perder
+          </button>
         </div>
-
-        <div style={{ background: "#111", padding: "20px", borderRadius: "12px" }}>
-          <h3>Score de Mercado</h3>
-          <p style={{ fontSize: "20px" }}>78 / 100</p>
-        </div>
-
-        <div style={{ background: "#111", padding: "20px", borderRadius: "12px" }}>
-          <h3>Alertas de Ativos</h3>
-          <p style={{ fontSize: "20px" }}>3 oportunidades</p>
-        </div>
-
-        <div style={{ background: "#111", padding: "20px", borderRadius: "12px" }}>
-          <h3>Status da Plataforma</h3>
-          <p style={{ color: "limegreen" }}>Online 🚀</p>
-        </div>
-
       </div>
 
     </main>
