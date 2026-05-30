@@ -1,8 +1,8 @@
 export default function Home() {
   return (
-    <main style={{ padding: 40, color: "white", background: "black", minHeight: "100vh" }}>
+    <div style={{ padding: 40 }}>
       <h1>PELLEGRINELI INVEST</h1>
-      <p>Plataforma rodando com sucesso 🚀</p>
-    </main>
+      <p>Site funcionando na Vercel 🚀</p>
+    </div>
   )
 }
