@@ -1,8 +1,3 @@
-export const metadata = {
-  title: "PELLEGRINELI INVEST",
-  description: "Plataforma financeira",
-}
-
 export default function RootLayout({
   children,
 }: {
@@ -10,7 +5,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body style={{ margin: 0, background: "black", color: "white" }}>
+      <body style={{ margin: 0, background: "#0a0a0a", color: "white" }}>
         {children}
       </body>
     </html>
