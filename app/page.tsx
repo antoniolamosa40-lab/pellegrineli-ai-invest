@@ -45,26 +45,10 @@ export default function Home() {
           R$ {valor.toLocaleString()}
         </p>
 
-        <button onClick={ganhar} style={{
-          marginRight: "10px",
-          padding: "10px",
-          background: "green",
-          color: "white",
-          border: "none",
-          borderRadius: "8px"
-        }}>
-          Ganhar
-        </button>
+        <button className="btn-green" onClick={ganhar}>Ganhar</button>
 
-        <button onClick={perder} style={{
-          padding: "10px",
-          background: "red",
-          color: "white",
-          border: "none",
-          borderRadius: "8px"
-        }}>
-          Perder
-        </button>
+        <button className="btn-red" onClick={perder}>Perder</button>
+
       </div>
 
       <div style={{
@@ -72,17 +56,13 @@ export default function Home() {
         gap: "10px"
       }}>
 
-        <div style={{ background: "#111", padding: "15px", borderRadius: "10px" }}>
-          IA Financeira ativa 🤖
-        </div>
+        <div className="card">Carteira</div>
 
-        <div style={{ background: "#111", padding: "15px", borderRadius: "10px" }}>
-          Mercado em análise 📊
-        </div>
+        <div className="card">IA</div>
 
-        <div style={{ background: "#111", padding: "15px", borderRadius: "10px" }}>
-          Alertas de ativos 🔔
-        </div>
+        <div className="card">Mercado</div>
+
+        <div className="card">Alertas</div>
 
       </div>
 
