@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: #000;
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
   color: white;
   font-family: Arial, sans-serif;
 }
