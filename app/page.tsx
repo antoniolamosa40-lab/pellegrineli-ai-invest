@@ -1,4 +1,4 @@
-"use client"
+<h1>TESTE 123456 - ATUALIZOU</h1>
 
 import { useState } from "react"
 
